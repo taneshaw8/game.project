@@ -10,7 +10,7 @@
  */
 function Level() {
 	
-	Phaser.State.call(this);
+    Phaser.State.call(this);
 	
 }
 
