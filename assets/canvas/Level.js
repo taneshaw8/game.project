@@ -180,7 +180,7 @@ Level.prototype.create = function () {
 	this.add.sprite(1471, 1001, 'objects', 'Crate', _back);
 	
 	var _player = this.add.sprite(203, 1331, 'player', 0);
-	_player.anchor.setTo(0.5, 0.0);
+	_player.anchor.setTo(0, 10);
 	_player.animations.add('walk', [8, 9, 10, 11], 6, true);
 	_player.animations.add('jump', [4, 5], 6, true);
 	_player.animations.add('idle', [0, 1, 2], 4, true);
