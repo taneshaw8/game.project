@@ -3,9 +3,9 @@
     {
       "type": "spritesheet",
       "key": "player",
-      "url": "assets/images/fufu.png",
-      "frameWidth": 210,
-      "frameHeight": 210,
+      "url": "assets/images/shooter.png",
+      "frameWidth": 80,
+      "frameHeight": 81,
       "frameMax": -1,
       "margin": 0,
       "spacing": 0
