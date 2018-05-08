@@ -21,7 +21,7 @@
         {
          "columns":32,
          "firstgid":1,
-         "image":"..\/Downloads\/generic_platformer_tiles.png",
+         "image":"generic_platformer_tiles.png",
          "imageheight":768,
          "imagewidth":1024,
          "margin":0,
@@ -33,11 +33,11 @@
         }, 
         {
          "firstgid":769,
-         "source":"platformertiles.tsx"
+         "source":"platformertiles.png"
         }, 
         {
          "firstgid":793,
-         "source":"fantasy_tiles.tsx"
+         "source":"fantasy_tiles.png"
         }],
  "tilewidth":32,
  "type":"map",
