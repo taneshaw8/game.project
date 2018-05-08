@@ -21,12 +21,12 @@ var game = new Phaser.Game(1000, 1000, Phaser.CANVAS, 'phaser-example', { preloa
 
 function preload() {
 
-    // game.load.tilemap('level1', 'assets/map.json', null, Phaser.Tilemap.TILED_JSON);
-    game.load.tilemap('level1', 'assets/level1.json', null, Phaser.Tilemap.TILED_JSON);
-    // game.load.image('tiles-1', 'assets/generic_platformer_tiles.png');
-    // game.load.image('tiles-2', 'assets/fantasy_tiles.png');
-    // game.load.image('tiles-3', 'assets/platformertiles.png');
-    game.load.image('tiles-1', 'assets/tiles-1.png');
+     game.load.tilemap('level1', 'assets/map3.json', null, Phaser.Tilemap.TILED_JSON);
+//    game.load.tilemap('level1', 'assets/level1.json', null, Phaser.Tilemap.TILED_JSON);
+     game.load.image('tiles-1', 'assets/generic_platformer_tiles.png');
+//     game.load.image('tiles-2', 'assets/fantasy_tiles.png');
+//     game.load.image('tiles-3', 'assets/platformertiles.png');
+//    game.load.image('tiles-4', 'assets/tiles-1.png');
     game.load.spritesheet('dude', 'assets/shooter.png', 68, 78);
     game.load.spritesheet('droid', 'assets/cannibal.png', 32, 32);
     game.load.image('background', 'assets/background2.png');
@@ -62,9 +62,10 @@ function create() {
 //    console.log("props " + map[2])
 
     map.addTilesetImage('tiles-1');
-    // map.addTilesetImage('tiles-2');
-    // map.addTilesetImage('tiles-3');
-
+//     map.addTilesetImage('tiles-2');
+//     map.addTilesetImage('tiles-3');
+//    map.addTilesetImage('tiles-4');
+    
     map.setCollisionByExclusion([ 13, 14, 15, 16, 46, 47, 48, 49, 50, 51 ]);
 
     layer = map.createLayer('Tile Layer 1');

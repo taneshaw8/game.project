@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="100" height="100" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
+<map version="1.0" tiledversion="1.1.5" orientation="orthogonal" renderorder="right-down" width="96" height="96" tilewidth="32" tileheight="32" infinite="0" nextobjectid="1">
  <tileset firstgid="1" name="generic_platformer_tiles" tilewidth="32" tileheight="32" tilecount="768" columns="32">
   <image source="generic_platformer_tiles.png" width="1024" height="768"/>
  </tileset>
  <tileset firstgid="769" source="platformertiles.tsx"/>
  <tileset firstgid="793" source="fantasy_tiles.tsx"/>
- <layer name="Tile Layer 1" width="100" height="100">
+ <layer name="Tile Layer 1" width="96" height="96">
   <data encoding="csv">
 295,296,297,295,296,297,295,296,297,295,295,295,295,295,295,295,296,297,296,297,297,297,296,297,296,297,297,297,296,296,296,296,297,296,297,297,297,297,297,297,198,199,297,329,329,198,199,329,329,361,361,361,361,329,329,329,297,392,360,296,296,297,296,198,199,296,296,296,296,296,328,328,328,328,329,328,328,328,328,328,328,328,328,328,328,329,329,329,361,329,361,328,329,329,361,329,329,328,329,329,
 327,328,329,327,328,329,327,328,329,327,327,327,327,327,295,296,297,329,296,297,329,297,296,297,296,297,329,329,297,297,297,296,297,297,329,329,329,329,329,329,230,231,243,334,361,230,231,361,361,393,393,393,393,361,361,361,329,297,296,297,296,334,296,230,231,328,243,328,296,296,360,360,360,328,328,360,360,360,360,360,360,360,360,360,360,361,361,329,393,329,393,329,329,329,393,329,329,329,329,361,
