@@ -1,37 +1,18 @@
-<!DOCTYPE html>
-<!--
-	I have the code input but commented out for their map and tilesets in lines 24, 26, 27, 28, 65, 66. Just need to uncomment those lines and comment out lines 25, and 29 to make the following errors come into play.
 
- //In map.json at line 19 being 32 I get the division error "TileSet image dimensions do not match expected dimensions. Tileset width/height must be evenly divisible by Tilemap tile width/height."
- //also get the cannot get property '2' of undefined 
- 
- //If I Change tileheight in map.json at line 19 from 32 to 16 and it gets the tilesets to show on the map but it displays incorrectly
--->
-<html>
-    <head>
-        <meta charset = "utf-8"/>
-        <script src = "phaser.min.js"></script>
-        <script src = "phaser.js"></script>
-<!--        <script src = "styles.css"></script>-->
-    </head>
-    
-    <body>
-        <script type="text/javascript">
-            
-var game = new Phaser.Game(650, 350, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(800, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create, update: update, render: render });
 
 function preload() {
 
-     game.load.tilemap('level1', 'assets/map5.json', null, Phaser.Tilemap.TILED_JSON);
-     game.load.image('tiles-1', 'assets/generic_platformer_tiles.png');
-    game.load.spritesheet('dude', 'assets/spritesheet.png', 70, 80);
-    game.load.spritesheet('droid', 'assets/cannibal.png', 32, 32);
-    game.load.image('background', 'assets/clouds.png');
+    game.load.tilemap('level1', 'assets/games/starstruck/level1.json', null, Phaser.Tilemap.TILED_JSON);
+    game.load.image('tiles-1', 'assets/games/starstruck/tiles-1.png');
+    game.load.spritesheet('dude', 'assets/games/starstruck/dude.png', 32, 48);
+    game.load.spritesheet('droid', 'assets/games/starstruck/droid.png', 32, 32);
+    game.load.image('starSmall', 'assets/games/starstruck/star.png');
+    game.load.image('starBig', 'assets/games/starstruck/star2.png');
+    game.load.image('background', 'assets/games/starstruck/background2.png');
 
 }
-//need to fix shooter image 
-            
-            
+
 var map;
 var tileset;
 var layer;
@@ -46,19 +27,15 @@ function create() {
 
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
-    game.stage.backgroundColor = '87ceeb';
+    game.stage.backgroundColor = '#000000';
 
     bg = game.add.tileSprite(0, 0, 800, 600, 'background');
     bg.fixedToCamera = true;
 
     map = game.add.tilemap('level1');
-//    console.log("props " + map[2])
 
     map.addTilesetImage('tiles-1');
-//     map.addTilesetImage('tiles-2');
-//     map.addTilesetImage('tiles-3');
-//    map.addTilesetImage('tiles-4');
-    
+
     map.setCollisionByExclusion([ 13, 14, 15, 16, 46, 47, 48, 49, 50, 51 ]);
 
     layer = map.createLayer('Tile Layer 1');
@@ -73,7 +50,7 @@ function create() {
     player = game.add.sprite(32, 32, 'dude');
     game.physics.enable(player, Phaser.Physics.ARCADE);
 
-//    player.body.bounce.y = 0.2;
+    player.body.bounce.y = 0.2;
     player.body.collideWorldBounds = true;
     player.body.setSize(20, 32, 5, 16);
 
@@ -148,8 +125,3 @@ function render () {
     // game.debug.bodyInfo(player, 16, 24);
 
 }
-
-
-        </script>
-    </body>
-</html>
